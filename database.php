@@ -1,8 +1,7 @@
 <?php
 class Database 
 {
-	// these are not the real passwords
-	// for real passwords, see file in ../database subdirectory
+	// For localhost in XAMPP
 	private static $dbName = 'cis355' ; 
 	private static $dbHost = 'localhost' ;
 	private static $dbUsername = 'root';
@@ -16,20 +15,20 @@ class Database
 	
 	public static function connect()
 	{
-	   // One connection through whole application
-       if ( null == self::$cont )
-       {      
-        try 
-        {
-          self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword);  
-        }
-        catch(PDOException $e) 
-        {
-          die($e->getMessage());  
-        }
-       } 
-       return self::$cont;
-	}
+		
+	       if ( null == self::$cont )
+	       {      
+		try 
+		{
+		  self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword);  
+		}
+		catch(PDOException $e) 
+		{
+		  die($e->getMessage());  
+		}
+	       } 
+	       return self::$cont;
+		}
 	
 	public static function disconnect()
 	{

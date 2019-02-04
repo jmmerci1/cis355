@@ -8,6 +8,9 @@
 
 <body>
     <div class="container">
+		<div class = "row">
+			<p>GitHub Repo: <a href="https://github.com/jmmerci1/cis355">https://github.com/jmmerci1/cis355</a></p>
+		</div>
     		<div class="row">
     			<h3>PHP CRUD Grid</h3>
     		</div>
